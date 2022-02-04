@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: grid;
+}
+
+header {
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+}
+
+#logo {
+    background-image: url(../img/imagotipo_sandratorrez_vertical.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 4rem;
+    height:20rem;
+}
+
+.header__navigation {
+    display: flex;
+    flex-direction: column;
+    background-color: plum;
+}
+
+.nav__social {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav__main {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav__main a, .nav__social a {
+    text-decoration: none;
+    list-style: none;
+}
+
+@media (min-width: 1024px) {
+    header {
+        flex-direction: row;
+    }
+
+    #logo {
+        background-image: url(../img/imagotipo_sandratorrez_horizontal.svg);
+        height: 6rem;
+        width: 30rem;
+        margin: 1rem;
+    }
+}

@@ -11,6 +11,15 @@
     display: grid;
 }
 
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.shadow:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.4);
+}
+
 /** Header **/
 header {
     background-color: #252525;
@@ -35,6 +44,40 @@ header {
     margin: 1rem;
 }
 
+.header__navigation nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.header__navigation nav form {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+.header__navigation nav form button {
+    padding: 0 0.2rem;
+    border-radius: 0.5rem 0 0 0.5rem;
+    color: #252525;
+}
+
+.header__navigation nav form input {
+    width: 10rem;
+    padding: 0.0.2rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.header__navigation nav form input:focus {
+    outline-width: 0;
+}
+
+.header__navigation nav form button, .header__navigation nav form input {
+    font-size: 1.5rem;
+    border: none;
+}
+
 .nav__social {
     list-style: none;
     display: flex;
@@ -44,6 +87,7 @@ header {
 }
 
 .nav__main {
+    width: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -114,23 +158,44 @@ footer {
     color: #ffffff;
 }
 
+.nav__secondary a:hover {
+    color: #bf9cce;
+}
+
 .datafiscal {
     width: 4rem;
 }
 
 /** Main content **/
+.main__container {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
+}
 
+.main__container--card img {
+    width: 100%;
+}
+
+.main__container--card-content {
+    margin: 2rem;
+}
+
+.main__container--card-content h2 {
+    margin: 0 0 1rem 0;
+}
 
 /** Desktop View Media Query **/
 @media (min-width: 1024px) {
+    /* Header */
     header {
         flex-direction: row;
     }
 
     #logo {
         background-image: url(../img/imagotipo_sandratorrez_horizontal.svg);
-        height: 5rem;
-        width: 30rem;
+        height: 4rem;
+        width: 26rem;
         margin: 1rem;
     }
 
@@ -138,9 +203,22 @@ footer {
         width: 100%;
     }
 
+    .header__navigation nav {
+        flex-direction: row;
+    }
+
+    .header__navigation nav form input {
+        width: 7rem;
+    }
+
+    .header__navigation nav form button, .header__navigation nav form input {
+        font-size: 1rem;
+    }
+
     .nav__main {
         flex-direction: row;
         justify-content: space-around;
+        margin: 0;
     }
 
     .nav__social {
@@ -154,5 +232,10 @@ footer {
 
     .nav__main a {
         font-size: 1rem;
+    }
+
+    /* Main content */
+    .main__container {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

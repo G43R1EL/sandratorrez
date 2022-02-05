@@ -196,7 +196,7 @@ footer {
         background-image: url(../img/imagotipo_sandratorrez_horizontal.svg);
         height: 4rem;
         width: 26rem;
-        margin: 1rem;
+        margin: 1rem 0 1rem 1rem;
     }
 
     .header__navigation {
@@ -208,7 +208,7 @@ footer {
     }
 
     .header__navigation nav form input {
-        width: 7rem;
+        width: 6rem;
     }
 
     .header__navigation nav form button, .header__navigation nav form input {

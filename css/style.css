@@ -230,6 +230,64 @@ footer {
     margin: 1rem
 }
 
+.contact__form {
+    margin: 2rem;
+    padding: 2rem;
+    width: 100%;
+    max-width: 28rem;
+}
+
+.contact__form h1 {
+    margin: 0 0 1rem;
+}
+
+.contact__form p {
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contact__form input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 2px solid #bbbbbb;
+}
+
+.contact__form input:focus {
+    outline-width: 0;
+}
+
+.contact__form textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    border: 2px solid #bbbbbb;
+    resize: none;
+    height: 8rem;
+}
+
+.contact__form textarea:focus {
+    outline-width: 0;
+}
+
+.contact__form label, input, textarea {
+    width: 100%;
+}
+
+.contact__form .button--submit {
+    margin-top: 0.5rem;
+    border-radius: 1rem;
+    border: 2px solid #bf9cce;
+    background-color: #ffffff;
+    color: #bf9cce;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+}
+
+.contact__form .button--submit:hover {
+    background-color: #cfaddf;
+    color: #ffffff;
+}
+
 /** Desktop View Media Query **/
 @media (min-width: 1024px) {
     /* Header */
@@ -291,7 +349,7 @@ footer {
     }
 
     .about__container--card {
-        width: 992px;
+        width: 960px;
         margin: 2rem;
         padding: 2rem;
     }
@@ -312,7 +370,7 @@ footer {
     }
 
     .service__card {
-        width: 992px;
+        width: 960px;
         margin: 2rem;
         padding: 2rem;
         flex-direction: row;
@@ -321,6 +379,8 @@ footer {
 
     .service__card img {
         flex-basis: 50%;
+        /** Added for Chrome based browsers compatibility **/
+        width: 50%;
     }
 
     .service__card--content {

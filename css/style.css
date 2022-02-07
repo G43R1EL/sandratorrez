@@ -9,6 +9,8 @@
 /** Common styles **/
 .wrapper {
     display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
 .shadow {
@@ -185,6 +187,30 @@ footer {
     margin: 0 0 1rem 0;
 }
 
+.centered__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__container--card {
+    margin: 2rem;
+}
+
+.about__container--card img {
+    width: 100%;
+}
+
+.about__container--card h2 {
+    margin: 1rem;
+}
+
+.about__container--card p {
+    line-height: 2rem;
+    margin: 0 1rem 1rem 1rem;
+}
+
 /** Desktop View Media Query **/
 @media (min-width: 1024px) {
     /* Header */
@@ -237,5 +263,32 @@ footer {
     /* Main content */
     .main__container {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .about__container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .about__container--card {
+        width: 992px;
+        margin: 2rem;
+        padding: 2rem;
+    }
+
+    .about__container--card img {
+        width: 50%;
+        float: left;
+        margin: 0 2rem 2rem 0;
+    }
+
+    .about__container--card h2 {
+        margin: 0 0 1rem 0;
+    }
+
+    .about__container--card p {
+        line-height: 2rem;
+        margin: 0 0 1rem 0;
     }
 }

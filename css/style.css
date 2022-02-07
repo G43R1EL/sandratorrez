@@ -211,6 +211,25 @@ footer {
     margin: 0 1rem 1rem 1rem;
 }
 
+.service__card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.service__card img {
+    width: 100%;
+}
+
+.service__card h2 {
+    margin: 1rem;
+}
+
+.service__card p {
+    line-height: 2rem;
+    margin: 1rem
+}
+
 /** Desktop View Media Query **/
 @media (min-width: 1024px) {
     /* Header */
@@ -290,5 +309,25 @@ footer {
     .about__container--card p {
         line-height: 2rem;
         margin: 0 0 1rem 0;
+    }
+
+    .service__card {
+        width: 992px;
+        margin: 2rem;
+        padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .service__card img {
+        flex-basis: 50%;
+    }
+
+    .service__card--content {
+        flex-basis: 50%;
+    }
+
+    .service__card--reverse {
+        flex-direction: row-reverse;
     }
 }

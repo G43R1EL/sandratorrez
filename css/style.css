@@ -232,6 +232,7 @@ main {
 
 .service__card h2 {
     margin: 1rem;
+    text-transform: uppercase;
 }
 
 .service__card p {
@@ -240,17 +241,22 @@ main {
 }
 
 .contact__form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin: 2rem;
     padding: 2rem;
-    width: 100%;
-    max-width: 28rem;
+    width: 90%;
+    max-width: 36rem;
 }
 
 .contact__form h1 {
+    text-align: left;
     margin: 0 0 1rem;
 }
 
 .contact__form p {
+    text-align: left;
     line-height: 2rem;
     padding-bottom: 2rem;
 }
@@ -260,6 +266,7 @@ main {
     font-size: 1rem;
     border: none;
     border-bottom: 2px solid #bbbbbb;
+    margin-bottom: 2rem;
 }
 
 .contact__form input:focus {
@@ -272,13 +279,14 @@ main {
     border: 2px solid #bbbbbb;
     resize: none;
     height: 8rem;
+    margin: 1rem 0;
 }
 
 .contact__form textarea:focus {
     outline-width: 0;
 }
 
-.contact__form label, input, textarea {
+.contact__form input, textarea {
     width: 100%;
 }
 
@@ -290,6 +298,8 @@ main {
     color: #bf9cce;
     font-family: 'Nunito', sans-serif;
     font-weight: 500;
+    line-height: 2rem;
+    width: 12rem;
 }
 
 .contact__form .button--submit:hover {

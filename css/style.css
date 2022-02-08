@@ -389,9 +389,51 @@ main {
     grid-row: span 2;
 }
 
+/*********************************/
+/** Tablet View Media Query    **/
 /*******************************/
-/** Desktop View Media Query **/
-/*****************************/
+@media (min-width: 768px) {
+    /*************************/
+    /** Main content       **/
+    /***********************/
+    .main__container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .main__testimonials {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service__card {
+        width: 704px;
+        margin: 2rem;
+        padding: 2rem;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .service__card img {
+        flex-basis: 50%;
+        /** Added for Chrome based browsers compatibility **/
+        width: 50%;
+    }
+
+    .service__card--content {
+        flex-basis: 50%;
+    }
+
+    .service__card--reverse {
+        flex-direction: row-reverse;
+    }
+
+    .masonry__gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*********************************/
+/** Desktop View Media Query   **/
+/*******************************/
 @media (min-width: 1024px) {
     /*************************/
     /** Header             **/
@@ -490,7 +532,7 @@ main {
 
     .service__card img {
         flex-basis: 50%;
-        /** Added for Chrome based browsers compatibility **/
+        /* Added for Chrome based browsers compatibility */
         width: 50%;
     }
 
@@ -503,6 +545,6 @@ main {
     }
 
     .masonry__gallery {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
     }
 }

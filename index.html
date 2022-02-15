@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandra Torrez Make Up</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -30,12 +31,16 @@
                 </ul>
                 <!-- Main menu -->
                 <nav>
-                    <ul class="nav__main">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="./pages/about.html">Sobre mi</a></li>
-                        <li><a href="./pages/services.html">Servicios</a></li>
-                        <li><a href="./pages/portfolio.html">Portfolio</a></li>
-                        <li><a href="./pages/contact.html">Contacto</a></li>
+                    <button class="hamburguer">
+                        <i class="fas fa-bars menuIcon"></i>
+                        <i class="fas fa-window-close closeIcon"></i>
+                    </button>
+                    <ul class="nav__main animate__animated animate__fadeInDown">
+                        <li><a class="menuItem" href="#">Inicio</a></li>
+                        <li><a class="menuItem" href="./pages/about.html">Sobre mi</a></li>
+                        <li><a class="menuItem" href="./pages/services.html">Servicios</a></li>
+                        <li><a class="menuItem" href="./pages/portfolio.html">Portfolio</a></li>
+                        <li><a class="menuItem" href="./pages/contact.html">Contacto</a></li>
                     </ul>
                     <!-- Search bar -->
                     <form action="" method="get">
@@ -150,5 +155,18 @@
         <!-- Site footer end -->
     </div>
     <!-- Site wrapper end-->
+    <script type="text/javascript">
+        const mnuHamburguer = document.querySelector(".hamburguer");
+        const mnuHidden = document.querySelector(".nav__main");
+        const mnuIcon = document.querySelector(".menuIcon");
+        const mnuClose = document.querySelector(".closeIcon");
+
+
+        mnuHamburguer.addEventListener("click", () => {
+            mnuHidden.classList.toggle("visible");
+            mnuIcon.classList.toggle("invisible");
+            mnuClose.classList.toggle("visible");
+        })
+    </script>
 </body>
 </html>
